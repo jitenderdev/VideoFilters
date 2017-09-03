@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">VideoFilter</string>
+
+
+    <string name="filter_none">Original</string>
+    <string name="filter_adore">Adore</string>
+    <string name="filter_heart">Heart</string>
+    <string name="filter_perfume">Perfume</string>
+    <string name="filter_responsible">Responsible</string>
+    <string name="filter_filmstock">Film Stock</string>
+    <string name="filter_foggy_night">Foggy Night</string>
+    <string name="filter_hehe">Hehe</string>
+    <string name="filter_01">Filter 01</string>
+    <string name="filter_02">Filter 02</string>
+    <string name="filter_sunset">Sunset</string>
+    <string name="filter_warming">Warming</string>
+    <string name="filter_wildbird">WildBird</string>
+
+
+
+    <string name="saving">Saving video</string>
+    <string name="action_save">Save</string>
+
+</resources>
