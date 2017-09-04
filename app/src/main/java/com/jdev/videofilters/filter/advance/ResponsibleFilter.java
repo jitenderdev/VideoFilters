@@ -4,10 +4,10 @@ import android.content.Context;
 
 import com.jdev.videofilters.filter.base.OpenGlUtils;
 
-public class B612ResponsibleFilter extends B612BaseFilter {
+public class ResponsibleFilter extends BaseFilter {
 
 
-    public B612ResponsibleFilter(Context context) {
+    public ResponsibleFilter(Context context) {
         super(context);
     }
 

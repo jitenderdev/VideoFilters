@@ -3,9 +3,7 @@ package com.jdev.videofilters.utils;
 import android.media.MediaFormat;
 import android.os.Environment;
 import android.util.Log;
-
 import com.jdev.videofilters.filter.helper.MagicFilterType;
-
 import java.io.File;
 
 public class ConfigUtils {
@@ -60,12 +58,6 @@ public class ConfigUtils {
     }
 
     public void setVideoPath(String videoPath) {
-
-        File yourDir = new File(Environment.getExternalStorageDirectory(), "/Apnitor");
-        for (File f : yourDir.listFiles()) {
-            Log.d(LOG_TAG, f.getAbsolutePath());
-        }
-
         mVideoPath = videoPath;
         mMediaFormat = VideoInfoUtils.getVideoInfo(mVideoPath);
     }

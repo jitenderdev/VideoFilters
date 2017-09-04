@@ -5,7 +5,7 @@ import android.content.Context;
 
 import com.jdev.videofilters.filter.base.OpenGlUtils;
 
-public class Filter02 extends B612BaseFilter {
+public class Filter02 extends BaseFilter {
 
 
     public Filter02(Context context) {

@@ -5,10 +5,10 @@ import android.content.Context;
 
 import com.jdev.videofilters.filter.base.OpenGlUtils;
 
-public class B612PerfumeFilter extends B612BaseFilter {
+public class PerfumeFilter extends BaseFilter {
 
 
-    public B612PerfumeFilter(Context context) {
+    public PerfumeFilter(Context context) {
         super(context);
     }
 

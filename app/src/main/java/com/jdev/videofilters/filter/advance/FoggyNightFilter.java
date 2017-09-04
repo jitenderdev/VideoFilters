@@ -5,7 +5,7 @@ import android.content.Context;
 
 import com.jdev.videofilters.filter.base.OpenGlUtils;
 
-public class FoggyNightFilter extends B612BaseFilter {
+public class FoggyNightFilter extends BaseFilter {
 
 
     public FoggyNightFilter(Context context) {

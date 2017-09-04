@@ -5,10 +5,9 @@ import android.content.Context;
 
 import com.jdev.videofilters.filter.base.OpenGlUtils;
 
-public class B612AdoreFilter extends B612BaseFilter {
+public class AdoreFilter extends BaseFilter {
 
-
-    public B612AdoreFilter(Context context) {
+    public AdoreFilter(Context context) {
         super(context);
     }
 

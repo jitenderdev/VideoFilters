@@ -5,7 +5,7 @@ import android.content.Context;
 
 import com.jdev.videofilters.filter.base.OpenGlUtils;
 
-public class AmberFilter extends B612BaseFilter {
+public class AmberFilter extends BaseFilter {
 
 
     public AmberFilter(Context context) {

@@ -5,13 +5,13 @@ import android.opengl.GLES20;
 
 import com.jdev.videofilters.filter.base.GPUImageFilter;
 
-public abstract class B612BaseFilter extends GPUImageFilter {
+public abstract class BaseFilter extends GPUImageFilter {
 
     private int[] inputTextureHandles = {-1};
     private int[] inputTextureUniformLocations = {-1};
     private int mGLStrengthLocation;
 
-    public B612BaseFilter(Context context) {
+    public BaseFilter(Context context) {
         super(context, NO_FILTER_VERTEX_SHADER, FRAGMENT_SHADER);
     }
 
@@ -66,7 +66,6 @@ public abstract class B612BaseFilter extends GPUImageFilter {
                 inputTextureHandles[0] = getInputTexture();
             }
         });
-
     }
 
 }

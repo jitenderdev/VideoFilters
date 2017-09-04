@@ -14,17 +14,6 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
 
-    <SeekBar
-        android:id="@+id/filter_strength"
-        android:layout_width="300dp"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/video_filter_view"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="30dp"
-        android:max="100"
-        android:progress="100"
-        android:visibility="gone"/>
-
 
     <LinearLayout
         android:id="@+id/layout_controller"

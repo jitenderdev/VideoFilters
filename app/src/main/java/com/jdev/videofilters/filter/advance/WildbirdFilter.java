@@ -5,7 +5,7 @@ import android.content.Context;
 
 import com.jdev.videofilters.filter.base.OpenGlUtils;
 
-public class WildbirdFilter extends B612BaseFilter {
+public class WildbirdFilter extends BaseFilter {
 
 
     public WildbirdFilter(Context context) {

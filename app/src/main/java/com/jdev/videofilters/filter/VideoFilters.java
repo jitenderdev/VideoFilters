@@ -13,13 +13,13 @@ import com.jdev.videofilters.filter.base.TextureRotationUtil;
 import java.nio.FloatBuffer;
 
 
-public class VideoFilter extends GPUImageFilter {
+public class VideoFilters extends GPUImageFilter {
 
     private float[] mTextureTransformMatrix;
     private int mTextureTransformMatrixLocation;
     private boolean mHasSetSize;
 
-    public VideoFilter(Context context) {
+    public VideoFilters(Context context) {
         super(context, OpenGlUtils.readShaderFromRawResource(context, R.raw.photomovie_default_vertex), OpenGlUtils.readShaderFromRawResource(context, R.raw.photomovie_fragment_sharder));
 //        mGLTextureBuffer.put(TextureRotationUtil.getRotation(Rotation.NORMAL, false, true)).position(0);
     }

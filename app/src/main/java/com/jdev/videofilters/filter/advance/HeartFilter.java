@@ -5,10 +5,10 @@ import android.content.Context;
 
 import com.jdev.videofilters.filter.base.OpenGlUtils;
 
-public class B612HeartFilter extends B612BaseFilter {
+public class HeartFilter extends BaseFilter {
 
 
-    public B612HeartFilter(Context context) {
+    public HeartFilter(Context context) {
         super(context);
     }
 

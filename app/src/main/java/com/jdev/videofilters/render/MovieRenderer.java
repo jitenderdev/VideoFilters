@@ -8,8 +8,8 @@ import android.text.TextUtils;
 import android.util.Log;
 import android.view.Surface;
 
-import com.jdev.videofilters.filter.advance.B612BaseFilter;
-import com.jdev.videofilters.filter.VideoFilter;
+import com.jdev.videofilters.filter.advance.BaseFilter;
+import com.jdev.videofilters.filter.VideoFilters;
 import com.jdev.videofilters.filter.base.GPUImageFilter;
 import com.jdev.videofilters.filter.helper.FilterTypeHelper;
 import com.jdev.videofilters.filter.helper.MagicFilterType;
@@ -22,7 +22,7 @@ public class MovieRenderer implements SurfaceTexture.OnFrameAvailableListener, I
 
     private static final String TAG = MovieRenderer.class.getSimpleName();
 
-    private VideoFilter mVideoFilter;
+    private VideoFilters mVideoFilter;
 
     private float[] mVideoTextureTransform = new float[16];
     private MediaPlayer mVideoPlayer;
@@ -180,8 +180,8 @@ public class MovieRenderer implements SurfaceTexture.OnFrameAvailableListener, I
     }
 
     public void setFilterStrength(float strength) {
-        if (mFilter instanceof B612BaseFilter) {
-            ((B612BaseFilter) mFilter).setStrength(strength);
+        if (mFilter instanceof BaseFilter) {
+            ((BaseFilter) mFilter).setStrength(strength);
         }
     }
 
@@ -190,7 +190,7 @@ public class MovieRenderer implements SurfaceTexture.OnFrameAvailableListener, I
     public void surfaceCreated() {
         Log.d(TAG, "surfaceCreated");
 
-        mVideoFilter = new VideoFilter(mContext);
+        mVideoFilter = new VideoFilters(mContext);
         mVideoFilter.init();
         mVideoFilter.getInitTextureId();
         mVideoTexture = new SurfaceTexture(mVideoFilter.getTextureId());

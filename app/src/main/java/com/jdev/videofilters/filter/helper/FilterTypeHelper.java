@@ -5,10 +5,10 @@ import android.content.Context;
 
 import com.jdev.videofilters.R;
 import com.jdev.videofilters.filter.advance.AmberFilter;
-import com.jdev.videofilters.filter.advance.B612AdoreFilter;
-import com.jdev.videofilters.filter.advance.B612HeartFilter;
-import com.jdev.videofilters.filter.advance.B612PerfumeFilter;
-import com.jdev.videofilters.filter.advance.B612ResponsibleFilter;
+import com.jdev.videofilters.filter.advance.AdoreFilter;
+import com.jdev.videofilters.filter.advance.HeartFilter;
+import com.jdev.videofilters.filter.advance.PerfumeFilter;
+import com.jdev.videofilters.filter.advance.ResponsibleFilter;
 import com.jdev.videofilters.filter.advance.FilmStockFilter;
 import com.jdev.videofilters.filter.advance.Filter01;
 import com.jdev.videofilters.filter.advance.Filter02;
@@ -32,15 +32,15 @@ public class FilterTypeHelper {
             case NONE:
                 return null;
             case ADORE:
-                return new B612AdoreFilter(context);
+                return new AdoreFilter(context);
             case AMBER:
                 return new AmberFilter(context);
             case HEART:
-                return new B612HeartFilter(context);
+                return new HeartFilter(context);
             case PERFUME:
-                return new B612PerfumeFilter(context);
+                return new PerfumeFilter(context);
             case RESPONSIBLE:
-                return new B612ResponsibleFilter(context);
+                return new ResponsibleFilter(context);
             case FILMSTOCK:
                 return new FilmStockFilter(context);
             case FILTER_01:

@@ -5,7 +5,7 @@ import android.content.Context;
 
 import com.jdev.videofilters.filter.base.OpenGlUtils;
 
-public class SunsetFilter extends B612BaseFilter {
+public class SunsetFilter extends BaseFilter {
 
 
     public SunsetFilter(Context context) {
