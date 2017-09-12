@@ -1,19 +1,21 @@
 package com.jdev.videofilters.filter.advance;
 
+
 import android.content.Context;
 
 import com.jdev.videofilters.filter.base.OpenGlUtils;
 
-public class ResponsibleFilter extends BaseFilter {
+public class Filter04 extends BaseFilter {
 
 
-    public ResponsibleFilter(Context context) {
+    public Filter04(Context context) {
         super(context);
     }
 
     @Override
     protected int getInputTexture() {
-        return OpenGlUtils.loadTexture(mContext, "filter/responsible_new.png");
+        return OpenGlUtils.loadTexture(mContext, "filter/filter_04.png");
     }
+
 
 }

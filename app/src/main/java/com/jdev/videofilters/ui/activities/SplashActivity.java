@@ -3,10 +3,15 @@ package com.jdev.videofilters.ui.activities;
 import android.app.Activity;
 import android.content.Intent;
 import android.net.Uri;
+import android.os.Build;
 import android.os.Bundle;
+import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
+import android.widget.Toast;
+
+import com.jdev.videofilters.utils.Permissions;
 
 import java.io.File;
 
@@ -22,7 +27,31 @@ public class SplashActivity extends AppCompatActivity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        pickFile();
+        Log.d(LOG_TAG," MODEL is "+ Build.MODEL);
+        Log.d(LOG_TAG," MANUF is "+ Build.MANUFACTURER);
+
+        if (Permissions.checkPermissionReadStorage(this)) {
+            startActivity(new Intent(this,MainActivity.class));
+            finish();
+        }
+    }
+
+    @Override
+    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
+        super.onRequestPermissionsResult(requestCode, permissions, grantResults);
+        switch (requestCode) {
+
+            case Permissions.MY_PERMISSIONS_REQUEST_READ_STORAGE: {
+
+                if (grantResults.length > 0) {
+                   startActivity(new Intent(this,MainActivity.class));
+                    finish();
+                } else {
+                    Toast.makeText(this, "Please provide storage permissions", Toast.LENGTH_SHORT).show();
+                    finish();
+                }
+            }
+        }
     }
 
 

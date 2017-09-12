@@ -2,19 +2,21 @@
     <string name="app_name">VideoFilter</string>
 
 
-    <string name="filter_none">Original</string>
-    <string name="filter_adore">Adore</string>
-    <string name="filter_heart">Heart</string>
-    <string name="filter_perfume">Perfume</string>
-    <string name="filter_responsible">Responsible</string>
-    <string name="filter_filmstock">Film Stock</string>
-    <string name="filter_foggy_night">Foggy Night</string>
-    <string name="filter_hehe">Hehe</string>
-    <string name="filter_01">Filter 01</string>
-    <string name="filter_02">Filter 02</string>
-    <string name="filter_sunset">Sunset</string>
-    <string name="filter_warming">Warming</string>
-    <string name="filter_wildbird">WildBird</string>
+    <string name="filter_none">None</string>
+
+    <string name="filter_one">Filter 01</string>
+    <string name="filter_two">Filter 02</string>
+    <string name="filter_three">Filter 03</string>
+    <string name="filter_four">Filter 04</string>
+    <string name="filter_five">Filter 05</string>
+    <string name="filter_six">Filter 06</string>
+    <string name="filter_seven">Filter 07</string>
+    <string name="filter_eight">Filter 08</string>
+    <string name="filter_nine">Filter 09</string>
+    <string name="filter_ten">Filter 10</string>
+    <string name="filter_eleven">Filter 11</string>
+    <string name="filter_twelve">Filter 12</string>
+    <string name="filter_thirteen">Filter 13</string>
 
 
 

@@ -14,7 +14,7 @@ public class Filter02 extends BaseFilter {
 
     @Override
     protected int getInputTexture() {
-        return OpenGlUtils.loadTexture(mContext, "filter/filter_face02.png");
+        return OpenGlUtils.loadTexture(mContext, "filter/filter_02.png");
     }
 
 

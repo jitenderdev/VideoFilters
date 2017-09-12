@@ -5,16 +5,15 @@ import android.content.Context;
 
 import com.jdev.videofilters.filter.base.OpenGlUtils;
 
-public class WildbirdFilter extends BaseFilter {
+public class Filter03 extends BaseFilter {
 
-
-    public WildbirdFilter(Context context) {
+    public Filter03(Context context) {
         super(context);
     }
 
     @Override
     protected int getInputTexture() {
-        return OpenGlUtils.loadTexture(mContext, "filter/wildbird.png");
+        return OpenGlUtils.loadTexture(mContext, "filter/filter_03.png");
     }
 
 

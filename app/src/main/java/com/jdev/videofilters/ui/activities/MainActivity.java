@@ -4,6 +4,7 @@ import android.graphics.Point;
 import android.media.MediaFormat;
 import android.os.Bundle;
 import android.os.Environment;
+import android.support.annotation.NonNull;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.Menu;
@@ -13,11 +14,13 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.Toast;
+
 import com.jdev.videofilters.R;
 import com.jdev.videofilters.filter.helper.MagicFilterType;
-import com.jdev.videofilters.ui.views.VideoFilterView;
 import com.jdev.videofilters.ui.adapters.FilterAdapter;
+import com.jdev.videofilters.ui.views.VideoFilterView;
 import com.jdev.videofilters.utils.ConfigUtils;
+import com.jdev.videofilters.utils.Permissions;
 
 public class MainActivity extends BaseActivity implements View.OnClickListener {
 
@@ -38,6 +41,13 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
         setContentView(R.layout.activity_main);
 
 
+        if (Permissions.checkPermissionReadStorage(this)) {
+            loadVideoFile();
+        }
+    }
+
+
+    private void loadVideoFile() {
         ConfigUtils.getInstance().setVideoPath(VIDEO_PATH);
         MediaFormat format = ConfigUtils.getInstance().getMediaFormat();
         if (format == null) {
@@ -47,22 +57,20 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
         int videoFrameRate = format.getInteger(MediaFormat.KEY_FRAME_RATE);
         int frameInterval = 1000 / videoFrameRate;
         ConfigUtils.getInstance().setFrameInterval(frameInterval);
-
-
         setUpLayout();
-
     }
-
 
     @Override
     protected void onResume() {
         super.onResume();
-        mVideoFilterView.onResume();
+        if (mVideoFilterView != null)
+            mVideoFilterView.onResume();
     }
 
     @Override
     protected void onPause() {
         super.onPause();
+        if (mVideoFilterView != null)
         mVideoFilterView.onPause();
     }
 
@@ -89,8 +97,6 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
                 break;
         }
     }
-
-
 
 
     @Override
@@ -153,7 +159,7 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
 
             @Override
             public void onNoChanged(int pos) {
-               // mSBFilter.setVisibility(mSBFilter.getVisibility() == View.VISIBLE ? View.INVISIBLE : View.VISIBLE);
+                // mSBFilter.setVisibility(mSBFilter.getVisibility() == View.VISIBLE ? View.INVISIBLE : View.VISIBLE);
             }
         });
 
@@ -176,5 +182,22 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
     @Override
     protected void setDataInViewObjects() {
 
+    }
+
+
+    @Override
+    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
+        super.onRequestPermissionsResult(requestCode, permissions, grantResults);
+        switch (requestCode) {
+
+            case Permissions.MY_PERMISSIONS_REQUEST_READ_STORAGE: {
+
+                if (grantResults.length > 0) {
+                    loadVideoFile();
+                } else {
+                    Toast.makeText(this, "Please provide storage permissions", Toast.LENGTH_SHORT).show();
+                }
+            }
+        }
     }
 }

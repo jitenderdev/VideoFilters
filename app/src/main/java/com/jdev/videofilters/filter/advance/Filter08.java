@@ -5,15 +5,17 @@ import android.content.Context;
 
 import com.jdev.videofilters.filter.base.OpenGlUtils;
 
-public class PerfumeFilter extends BaseFilter {
+public class Filter08 extends BaseFilter {
 
 
-    public PerfumeFilter(Context context) {
+    public Filter08(Context context) {
         super(context);
     }
 
     @Override
     protected int getInputTexture() {
-        return OpenGlUtils.loadTexture(mContext, "filter/perfume_new.png");
+        return OpenGlUtils.loadTexture(mContext, "filter/filter_08.jpg");
     }
+
+
 }

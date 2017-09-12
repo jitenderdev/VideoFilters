@@ -5,16 +5,16 @@ import android.content.Context;
 
 import com.jdev.videofilters.filter.base.OpenGlUtils;
 
-public class SunsetFilter extends BaseFilter {
+public class Filter11 extends BaseFilter {
 
 
-    public SunsetFilter(Context context) {
+    public Filter11(Context context) {
         super(context);
     }
 
     @Override
     protected int getInputTexture() {
-        return OpenGlUtils.loadTexture(mContext, "filter/late_sunset.png");
+        return OpenGlUtils.loadTexture(mContext, "filter/filter_11.png");
     }
 
 

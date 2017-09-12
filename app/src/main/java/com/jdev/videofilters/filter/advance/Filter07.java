@@ -5,16 +5,16 @@ import android.content.Context;
 
 import com.jdev.videofilters.filter.base.OpenGlUtils;
 
-public class FoggyNightFilter extends BaseFilter {
+public class Filter07 extends BaseFilter {
 
 
-    public FoggyNightFilter(Context context) {
+    public Filter07(Context context) {
         super(context);
     }
 
     @Override
     protected int getInputTexture() {
-        return OpenGlUtils.loadTexture(mContext, "filter/foggy_night.png");
+        return OpenGlUtils.loadTexture(mContext, "filter/filter_07.png");
     }
 
 

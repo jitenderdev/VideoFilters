@@ -5,16 +5,16 @@ import android.content.Context;
 
 import com.jdev.videofilters.filter.base.OpenGlUtils;
 
-public class HeartFilter extends BaseFilter {
+public class Filter05 extends BaseFilter {
 
 
-    public HeartFilter(Context context) {
+    public Filter05(Context context) {
         super(context);
     }
 
     @Override
     protected int getInputTexture() {
-        return OpenGlUtils.loadTexture(mContext, "filter/heart_new.png");
+        return OpenGlUtils.loadTexture(mContext, "filter/filter_05.png");
     }
 
 

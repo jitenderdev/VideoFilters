@@ -22,18 +22,18 @@ public class FilterAdapter extends RecyclerView.Adapter<FilterAdapter.FilterHold
 
     private final MagicFilterType[] types = new MagicFilterType[]{
             MagicFilterType.NONE,
-            MagicFilterType.ADORE,
-            MagicFilterType.HEART,
-            MagicFilterType.PERFUME,
-            MagicFilterType.RESPONSIBLE,
-            MagicFilterType.FILMSTOCK,
-            MagicFilterType.FILTER_01,
-            MagicFilterType.FILTER_02,
-            MagicFilterType.FOGGYNIGHT,
-            MagicFilterType.HEHE,
-            MagicFilterType.SUNSET,
-            MagicFilterType.WARMING,
-            MagicFilterType.WILDBIRD
+            MagicFilterType.FILTER_1,
+            MagicFilterType.FILTER_3,
+            MagicFilterType.FILTER_4,
+            MagicFilterType.FILTER_5,
+            MagicFilterType.FILTER_6,
+            MagicFilterType.FILTER_7,
+            MagicFilterType.FILTER_8,
+            MagicFilterType.FILTER_9,
+            MagicFilterType.FILTER_10,
+            MagicFilterType.FILTER_11,
+            MagicFilterType.FILTER_12,
+            MagicFilterType.FILTER_13
     };
 
     public FilterAdapter(Context context) {

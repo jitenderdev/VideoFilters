@@ -20,10 +20,12 @@ import android.media.MediaCodec;
 import android.media.MediaCodecInfo;
 import android.media.MediaFormat;
 import android.media.MediaMuxer;
+import android.os.Build;
 import android.util.Log;
 import android.view.Surface;
 
 import com.jdev.videofilters.utils.ConfigUtils;
+import com.jdev.videofilters.utils.Device;
 
 import java.io.File;
 import java.io.IOException;
@@ -63,7 +65,15 @@ public class VideoEncoderCore {
             throws IOException {
         mBufferInfo = new MediaCodec.BufferInfo();
 
-        MediaFormat format = MediaFormat.createVideoFormat(MIME_TYPE, width, height);
+        MediaFormat format = null;
+        // SAMSUNG j7 w= 1920, h = 1080
+        // MOTO G2 = 1280, h = 720
+        String model = Build.MODEL;
+        if (model.contains(Device.SAMSUNG_ON7_PRO)) {
+            format = MediaFormat.createVideoFormat(MIME_TYPE, 720, 1280);
+        } else {
+            format = MediaFormat.createVideoFormat(MIME_TYPE, width, height);
+        }
 
         // Set some properties.  Failing to specify some of these can cause the MediaCodec
         // configure() call to throw an unhelpful exception.
@@ -74,12 +84,17 @@ public class VideoEncoderCore {
         format.setInteger(MediaFormat.KEY_I_FRAME_INTERVAL, IFRAME_INTERVAL);
         if (VERBOSE) Log.d(TAG, "format: " + format);
 
+
         // Create a MediaCodec encoder, and configure it with our format.  Get a Surface
         // we can use for input and wrap it with a class that handles the EGL work.
         mEncoder = MediaCodec.createEncoderByType(MIME_TYPE);
-        mEncoder.configure(format, null, null, MediaCodec.CONFIGURE_FLAG_ENCODE);
-        mInputSurface = mEncoder.createInputSurface();
-        mEncoder.start();
+        try {
+            mEncoder.configure(format, null, null, MediaCodec.CONFIGURE_FLAG_ENCODE);
+            mInputSurface = mEncoder.createInputSurface();
+            mEncoder.start();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
 
         // Create a MediaMuxer.  We can't add the video track and resume() the muxer here,
         // because our MediaFormat doesn't have the Magic Goodies.  These can only be

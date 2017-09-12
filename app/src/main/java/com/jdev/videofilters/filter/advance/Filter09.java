@@ -5,17 +5,15 @@ import android.content.Context;
 
 import com.jdev.videofilters.filter.base.OpenGlUtils;
 
-public class HeheFilter extends BaseFilter {
+public class Filter09 extends BaseFilter {
 
 
-    public HeheFilter(Context context) {
+    public Filter09(Context context) {
         super(context);
     }
 
     @Override
     protected int getInputTexture() {
-        return OpenGlUtils.loadTexture(mContext, "filter/hehe.jpg");
+        return OpenGlUtils.loadTexture(mContext, "filter/filter_09.png");
     }
-
-
 }

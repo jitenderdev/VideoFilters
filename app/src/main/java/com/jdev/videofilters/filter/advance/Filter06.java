@@ -5,15 +5,16 @@ import android.content.Context;
 
 import com.jdev.videofilters.filter.base.OpenGlUtils;
 
-public class AdoreFilter extends BaseFilter {
+public class Filter06 extends BaseFilter {
 
-    public AdoreFilter(Context context) {
+
+    public Filter06(Context context) {
         super(context);
     }
 
     @Override
     protected int getInputTexture() {
-        return OpenGlUtils.loadTexture(mContext, "filter/adore_new.png");
+        return OpenGlUtils.loadTexture(mContext, "filter/filter_06.png");
     }
 
 

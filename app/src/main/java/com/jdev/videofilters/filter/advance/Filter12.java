@@ -5,16 +5,16 @@ import android.content.Context;
 
 import com.jdev.videofilters.filter.base.OpenGlUtils;
 
-public class AmberFilter extends BaseFilter {
+public class Filter12 extends BaseFilter {
 
 
-    public AmberFilter(Context context) {
+    public Filter12(Context context) {
         super(context);
     }
 
     @Override
     protected int getInputTexture() {
-        return OpenGlUtils.loadTexture(mContext, "filter/edgy_amber.png");
+        return OpenGlUtils.loadTexture(mContext, "filter/filter_12.png");
     }
 
 

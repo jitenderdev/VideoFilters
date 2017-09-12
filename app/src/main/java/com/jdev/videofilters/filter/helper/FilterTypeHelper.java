@@ -4,19 +4,19 @@ package com.jdev.videofilters.filter.helper;
 import android.content.Context;
 
 import com.jdev.videofilters.R;
-import com.jdev.videofilters.filter.advance.AmberFilter;
-import com.jdev.videofilters.filter.advance.AdoreFilter;
-import com.jdev.videofilters.filter.advance.HeartFilter;
-import com.jdev.videofilters.filter.advance.PerfumeFilter;
-import com.jdev.videofilters.filter.advance.ResponsibleFilter;
-import com.jdev.videofilters.filter.advance.FilmStockFilter;
+import com.jdev.videofilters.filter.advance.Filter04;
+import com.jdev.videofilters.filter.advance.Filter03;
+import com.jdev.videofilters.filter.advance.Filter07;
+import com.jdev.videofilters.filter.advance.Filter09;
+import com.jdev.videofilters.filter.advance.Filter10;
+import com.jdev.videofilters.filter.advance.Filter05;
 import com.jdev.videofilters.filter.advance.Filter01;
 import com.jdev.videofilters.filter.advance.Filter02;
-import com.jdev.videofilters.filter.advance.FoggyNightFilter;
-import com.jdev.videofilters.filter.advance.HeheFilter;
-import com.jdev.videofilters.filter.advance.SunsetFilter;
-import com.jdev.videofilters.filter.advance.WarmingFilter;
-import com.jdev.videofilters.filter.advance.WildbirdFilter;
+import com.jdev.videofilters.filter.advance.Filter06;
+import com.jdev.videofilters.filter.advance.Filter08;
+import com.jdev.videofilters.filter.advance.Filter11;
+import com.jdev.videofilters.filter.advance.Filter12;
+import com.jdev.videofilters.filter.advance.FIlter13;
 import com.jdev.videofilters.filter.base.GPUImageFilter;
 import com.jdev.videofilters.utils.ConfigUtils;
 
@@ -31,34 +31,32 @@ public class FilterTypeHelper {
         switch (filterType) {
             case NONE:
                 return null;
-            case ADORE:
-                return new AdoreFilter(context);
-            case AMBER:
-                return new AmberFilter(context);
-            case HEART:
-                return new HeartFilter(context);
-            case PERFUME:
-                return new PerfumeFilter(context);
-            case RESPONSIBLE:
-                return new ResponsibleFilter(context);
-            case FILMSTOCK:
-                return new FilmStockFilter(context);
-            case FILTER_01:
+            case FILTER_1:
                 return new Filter01(context);
-            case FILTER_02:
+            case FILTER_2:
                 return new Filter02(context);
-            case FOGGYNIGHT:
-                return new FoggyNightFilter(context);
-            case HEHE:
-                return new HeheFilter(context);
-            case SUNSET:
-                return new SunsetFilter(context);
-            case WARMING:
-                return new WarmingFilter(context);
-            case WILDBIRD:
-                return new WildbirdFilter(context);
-
-
+            case FILTER_3:
+                return new Filter03(context);
+            case FILTER_4:
+                return new Filter04(context);
+            case FILTER_5:
+                return new Filter05(context);
+            case FILTER_6:
+                return new Filter06(context);
+            case FILTER_7:
+                return new Filter07(context);
+            case FILTER_8:
+                return new Filter08(context);
+            case FILTER_9:
+                return new Filter09(context);
+            case FILTER_10:
+                return new Filter10(context);
+            case FILTER_11:
+                return new Filter11(context);
+            case FILTER_12:
+                return new Filter12(context);
+            case FILTER_13:
+                return new FIlter13(context);
             default:
                 return null;
         }
@@ -69,30 +67,32 @@ public class FilterTypeHelper {
         switch (filterType) {
             case NONE:
                 return R.string.filter_none;
-            case ADORE:
-                return R.string.filter_adore;
-            case HEART:
-                return R.string.filter_heart;
-            case PERFUME:
-                return R.string.filter_perfume;
-            case RESPONSIBLE:
-                return R.string.filter_responsible;
-            case FILMSTOCK:
-                return R.string.filter_filmstock;
-            case FILTER_01:
-                return R.string.filter_01;
-            case FILTER_02:
-                return R.string.filter_02;
-            case FOGGYNIGHT:
-                return R.string.filter_foggy_night;
-            case HEHE:
-                return R.string.filter_hehe;
-            case SUNSET:
-                return R.string.filter_sunset;
-            case WARMING:
-                return R.string.filter_warming;
-            case WILDBIRD:
-                return R.string.filter_wildbird;
+            case FILTER_1:
+                return R.string.filter_one;
+            case FILTER_2:
+                return R.string.filter_two;
+            case FILTER_3:
+                return R.string.filter_three;
+            case FILTER_4:
+                return R.string.filter_four;
+            case FILTER_5:
+                return R.string.filter_five;
+            case FILTER_6:
+                return R.string.filter_six;
+            case FILTER_7:
+                return R.string.filter_seven;
+            case FILTER_8:
+                return R.string.filter_eight;
+            case FILTER_9:
+                return R.string.filter_nine;
+            case FILTER_10:
+                return R.string.filter_ten;
+            case FILTER_11:
+                return R.string.filter_eleven;
+            case FILTER_12:
+                return R.string.filter_twelve;
+            case FILTER_13:
+                return R.string.filter_thirteen;
             default:
                 return R.string.filter_none;
         }
@@ -102,7 +102,6 @@ public class FilterTypeHelper {
         switch (filterType) {
             case NONE:
                 return R.color.filter_category_greenish_dummy;
-
             default:
                 return R.color.filter_category_greenish_normal;
         }

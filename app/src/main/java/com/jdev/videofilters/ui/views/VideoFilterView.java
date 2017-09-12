@@ -187,11 +187,13 @@ public class VideoFilterView extends SurfaceView implements SurfaceHolder.Callba
     @Override
     public void surfaceChanged(SurfaceHolder holder, int format, int width, int height) {
         Log.d(TAG, "surfaceChanged");
+        try{
         mMovieThread.sendSurfaceChanged(width, height);
-
         if (!mInit) {
             mTimer.schedule(mTimerTask, 0, ConfigUtils.getInstance().getFrameInterval());
             mInit = true;
+        }}catch (Exception e){
+            e.printStackTrace();
         }
     }
 
